@@ -2,9 +2,7 @@
 #include <vector>
 
 int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
+    std::cout << "Введите кол-во чисел в массиве и кол-во запросов: ";
     int n, k;
     std::cin >> n >> k;
 
