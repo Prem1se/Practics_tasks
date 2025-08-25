@@ -23,7 +23,8 @@ if contours_areas:
     x, y, w, h = cv2.boundingRect(largest_contour)
     cx = int(x + w / 2) # int так как cv2.circle не работает с float
     cy = int(y + h / 2)
-
+    
+    print("Координаты центра:", cx, cy)
     result = image.copy()
 
     cv2.drawContours(result, [largest_contour], -1, (0, 0, 255), 2) # передаю image и массив точек который нужно отрисовать, также цвет контура и толщина
