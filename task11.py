@@ -5,7 +5,11 @@ image = cv2.imread("test2.jpg")
 cv2.imshow("original", image)
 cv2.waitKey(0)
 
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # перевел в оттенки серого
+blurred_image = cv2.GaussianBlur(image, (11, 11), 0)
+cv2.imshow("blur", blurred_image)
+cv2.waitKey(0)
+
+gray = cv2.cvtColor(blurred_image, cv2.COLOR_BGR2GRAY)  # перевел в оттенки серого
 cv2.imshow("gray", gray)
 cv2.waitKey(0)
 
@@ -35,4 +39,6 @@ if contours_areas:
     cv2.destroyAllWindows()
 else:
     print("Фигуры не найдены")
+
+
 
